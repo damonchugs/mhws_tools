@@ -56,7 +56,7 @@
     <div class="part">
       <div class="name">
         CE-编号
-        <span>（点击下面编号复制）</span>
+        <span>（点击下面编号复制，ce位数为4byte。）</span>
       </div>
       <div class="content ceNumber">
         <p @click="copyToClipboard(CENumber)">{{ CENumber }}</p>
@@ -70,7 +70,7 @@
       <div class="name">
         复原加成
         <span>
-          （从下往上，每级3位数，末尾补0，最一位2位数，10以下为09。同一个词条EX最多俩个。例：17017016016009）
+          （从下往上，每级3位数，末尾补0，最一位2位数，10以下为09。同一个词条EX最多俩个。例：17017016016009。ce位数为8byte。）
         </span>
       </div>
       <div class="content recoveryBonus">
