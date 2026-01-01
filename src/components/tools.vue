@@ -59,7 +59,7 @@
         <span>（点击下面编号复制）</span>
       </div>
       <div class="content ceNumber">
-        <p @click="copyToClipboard(item)">{{ CENumber }}</p>
+        <p @click="copyToClipboard(CENumber)">{{ CENumber }}</p>
         <!-- 复制成功提示 -->
         <transition name="fade">
           <div v-if="showSuccess" class="success-message">复制成功！</div>
