@@ -170,7 +170,7 @@ export default {
       id: 3,
       value: 11,
       type: 'EX',
-      name: '斩味/装载',
+      name: '斩味/装填',
     },
     {
       id: 4,
