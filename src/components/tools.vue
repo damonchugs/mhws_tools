@@ -1,5 +1,6 @@
 <template>
   <div class="tools-container">
+    <div class="git-ref" @click="RefUrlLocation">RefGit链接</div>
     <header>
       <h1>MHWS巨戟龙武器工具</h1>
     </header>
@@ -95,6 +96,17 @@
 import { ref, computed } from 'vue'
 import mhws_ce_data from '@/assets/mhws_ce_data.js'
 
+// ref框架链接
+const refUrl = ref('https://github.com/praydog/REFramework-nightly/releases');
+const RefUrlLocation = () => {
+  window.open(refUrl.value);
+
+  // 如果浏览器阻止了弹窗（比如非用户主动触发），会返回 null
+  if (newTab === null) {
+    alert('弹窗被浏览器拦截，请允许弹窗权限！');
+  }
+}
+
 // 机械素材生产编号
 const productionNumberValue = ref({
   one: 1,
@@ -162,6 +174,9 @@ const copyToClipboard = async (text) => {
 </script>
 
 <style scoped>
+.tools-container {
+  position: relative;
+}
 .tools-container .el-select {
   margin-right: 10px;
 }
@@ -240,5 +255,15 @@ const copyToClipboard = async (text) => {
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+
+.tools-container .git-ref {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 12px;
+  color: red;
+  text-decoration: dashed;
 }
 </style>
