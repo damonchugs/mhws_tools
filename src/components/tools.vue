@@ -84,7 +84,7 @@
         <p v-for="item in recoveryBonusOptions.slice(6, 7)" :key="item.id">
           {{ item.name + item.type + ': ' + item.value }}
         </p>
-        <p v-for="item in recoveryBonusOptions.slice(7, 8)" :key="item.id">
+        <p v-for="item in recoveryBonusOptions.slice(7, 9)" :key="item.id">
           {{ item.name + item.type + ': ' + item.value }}
         </p>
       </div>

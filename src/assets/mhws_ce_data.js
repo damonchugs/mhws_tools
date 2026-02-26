@@ -193,7 +193,7 @@ export default {
     {
       id: 7,
       value: 9,
-      type: 'I',
+      type: 'II',
       name: '攻击',
     },
     {
